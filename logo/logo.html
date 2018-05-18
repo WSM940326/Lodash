@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>logo 鼠标滑动切换</title>
+    <!-- <meta http-equiv="refresh" content="3" /> -->
+    <style>
+/* 图片切换效果 */
+         div:nth-child(n + 2) {
+            height: 800px;
+            width: 800px;
+            background-repeat: no-repeat;
+            background-position:  center;
+            background-attachment: fixed;
+            box-sizing: border-box;
+            border: 1px solid;
+        }
+
+        .a {
+            background-image: url(porsche-model1.png);
+        }
+        .b {
+            background-image: url(porsche-model2.png);
+        }
+        .c {
+            background-image: url(porsche-model3.png);
+        }
+    
+
+        /*logo 鼠标切换效果*/
+
+
+
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-image: url(logo-footer.png);
+            background-position: center;
+        }
+
+        .logo:hover {
+            background-image: url(logo-footer2.png);
+        }
+    </style>
+</head>
+<body>
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+        <div class="logo"></div>
+</body>
+</html>
