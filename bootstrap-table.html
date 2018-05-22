@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格作业</title>
+
+    <style>
+/* .table-hover（列高亮效果的实现） */
+       .table {
+           line-height: 35px;
+           box-sizing: border-box;
+           width: 700px;
+           background-color: #ff8080;
+           color: aliceblue;
+           font-size: 15px;
+           border-collapse: collapse;
+           text-align: left;
+       }
+       thead {
+           background-color: #804000;
+       }
+       .table tr {
+           border: 1px solid rgba(0, 255, 191, 0.459);
+           box-sizing: border-box;
+       }
+       .table tbody tr:hover {
+           background-color: #ce0000;
+       }
+
+/*<------- .table-bordered 效果实现-----> */
+
+    .table-bordered {
+           line-height: 35px;
+           box-sizing: border-box;
+           width: 700px;
+           background-color: #ff8080;
+           color: aliceblue;
+           font-size: 15px;
+           border-collapse: collapse;
+           text-align: left;
+    }
+
+      .table-bordered tr {
+           border: 1px solid rgb(0, 255, 191);
+           box-sizing: border-box;
+       }
+
+      .table-bordered td {
+           border:0.5px solid rgb(0, 255, 191);
+     
+    }
+      .table-bordered th {
+           border:0.5px solid rgb(0, 255, 191);
+    
+    }
+
+
+
+ /* <!--- .table-striped 效果实现   --> */
+    .table-striped {
+           line-height: 35px;
+           box-sizing: border-box;
+           width: 700px;
+           background-color: #ff8080;
+           color: aliceblue;
+           font-size: 15px;
+           border-collapse: collapse;
+           text-align: left;
+    }
+    
+    .table-striped thead {
+        background-color: #ff8080;
+    }
+    
+    .table-striped tr {
+           border: 1px solid rgb(0, 255, 191);
+           box-sizing: border-box;
+    }
+
+   .table-striped tbody tr:nth-child(1) {
+       background-color: #808080;
+   }
+
+   .table-striped tbody tr:nth-child(3) {
+       background-color: #808080;
+   }
+
+    </style>
+</head>
+<body>
+<!-- /* .table-hover（列高亮效果的实现） */ -->
+  
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr> <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr> <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+
+<br>
+<br>
+<br>
+<!--- .table-bordered 效果实现   -->
+
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <!--- .table-striped 效果实现   -->
+
+          <table class="table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+            </table>
+</body>
+</html>
