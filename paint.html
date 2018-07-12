@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var cvs = document.querySelector('canvas')
+  var ctx = cvs.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+
+</script>
+
+<script>
+  //实线
+  for (let i = 0; i < 400; i++) {
+    dot (i, 10)
+  }
+
+  //一个间隔的虚线
+  for (let i = 0; i < 400; i = i + 2) {
+    dot (i, 20)
+  }
+
+  //两个间隔的虚线
+  for (let i = 0; i < 400; i = i + 4) {
+    dot (i, 30)
+  }
+
+  //三实点两空的虚线
+  for (let i = 0; i < 400; i = i + 6) {
+    for (let j = i; j < i + 3; j++) {
+      dot (j, 40)
+    }
+  }
+
+  //斜角45°的实线
+  for (let i = 0; i < 400; i++) {
+    dot (i, i)
+  }
+
+  //对角线
+  for (let i = 0; i < 400; i++) {
+    dot (i, 3 * i / 4)
+  }
+  //空心圆
+  for(let i = 50; i < 200; i = i + 0.01) {
+    dot (i, Math.sqrt(1800 - (i - 100) ** 2) +100)
+    dot (i, -Math.sqrt(1800 - (i -100) **2) +100)
+  }
+
+  //正方形
+  for (let i = 150; i <= 200; i++) {
+    for (let j = 150; j <= 200; j++) {
+      dot (i, j)
+    }
+  }
+</script>
+</html>
