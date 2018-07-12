@@ -12,7 +12,7 @@ var WSM940326 = {
 
 // lodash --- 02:compact
   compact: function (array) {
-    
+  
 
 
   },
