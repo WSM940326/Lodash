@@ -1,5 +1,5 @@
 
-var WSM940326 = {
+var wsm940326 = {
 // lodash --- 01:chunk
   chunk: function (array, size = 1) {
     var result = []
