@@ -12,9 +12,9 @@ var wsm940326 = {
 
 // lodash --- 02:compact
   compact: function (array) {
-    var result = []
-
-
+    if (array == null) return []
+      return array.filter((v) => !!v!==false)
+      export default compact
   },
 // lodash --- 03:concat
 
@@ -42,8 +42,15 @@ var wsm940326 = {
 
   },
 
+// lodash --- 07:dorp
+drop: function (array, n = 1) {
+    const length = array == null ? 0 : array.length
+      return length
+    ? array.slice(n < 0 ? 0 : n, length)
+    : []
+},
 
-
+  
 
 
 
