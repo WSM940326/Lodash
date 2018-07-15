@@ -14,7 +14,7 @@ var wsm940326 = {
   compact: function (array) {
     if (array == null) return []
       return array.filter((v) => !!v!==false)
-      export default compact
+      
   },
 // lodash --- 03:concat
 
