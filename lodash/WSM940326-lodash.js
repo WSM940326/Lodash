@@ -1,10 +1,10 @@
 
 var wsm940326 = {
 // lodash --- 01:chunk
-  chunk: function (array, size = 1) {
+  chunk: function (array, size) {
     var result = []
-    for (var i = 0; i < array.length; i++) {
-      result.push(array.slice(i, size+ 1))
+    for (var i = 0; i < array.length; i += size) {
+      result.push(array.slice(i, i + size))
     }
     return result
   },
