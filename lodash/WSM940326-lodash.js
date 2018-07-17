@@ -87,7 +87,35 @@ var wsm940326 = {
 
   },
 
+  map: function (array) {
+    const carryBricks = arr => {
+      let newArr = []
+      arr.reduce((prev, current, index, array) => {
+        newArr.push(current + '~')
+      }, 0)
+     }
 
+  },
+
+  filter: function (array) {
+    const carryBricks = arr => {
+      let newArr = []
+      arr.reduce((prev, current, index, array) => {
+        current.length > 2 && newArr.push(current)
+      }, 0)
+    }
+
+
+  },
+
+
+  forEach: function (array) {
+    const carryBricks = arr => {
+      return arr.reduce((prev, current, index, array) => {
+        console.log(current)
+      }, 0)
+     }
+  },
 
 
 
