@@ -34,9 +34,18 @@ var wsm940326 = {
 
 
   // lodash ---> 04:difference
-  difference: function (array) {
+  difference: function (array, values) {
 
-
+    if (!array || !Array.isArray(array) || array.length <= 0) {
+      return []
+    }
+    var aaa = Array.from(arguments).slice(1)
+    if (!aaa || aaa.length <= 0) {
+      return array.concat()
+    }
+    return array.filter(function(value) {
+      return aaa.indexOf(value) < 0
+    })
 
   },
 
@@ -45,14 +54,40 @@ var wsm940326 = {
   // lodash ---> 05:differenceBy
   differenceBy: function (array) {
 
-
-
+    if (!array || !Array.isArray(array) || array.length <= 0) {
+      return []
+    } 
+    var aaa = arguments[1]
+    if (!aaa || !Array.isArray(aaa) || aaa.length <= 0) {
+      return array.concat()
+    }
+    var func = arguments[2] 
+    if (!func) {
+      func = x => x
+    } else if (typeof func === 'stying') {
+      var funcs = func
+      func = date => date[funcs]
+    }
+    var exc = aaa.map(function (value) {
+      return func(value)
+    })
+    return array.filter(function (value) {
+      return exc.indexOf(func(value)) < 0
+    })
   },
 
   
   // lodash ---> 06:differenceWith
   differenceWith: function (array) {
-
+    if (!array || !Array.isArray(array) || array.length <= 0) {
+      return []
+    }
+    var aaa = arguments[1]
+    if (!aaa || !Array.isArray(aaa) || aaa.length <= 0) {
+      return array.concat()
+    }
+    var com = arguments[2]
+    if (!com || typeof com)
 
 
   },
@@ -88,33 +123,33 @@ var wsm940326 = {
   },
 
   map: function (array) {
-    const carryBricks = arr => {
-      let newArr = []
-      arr.reduce((prev, current, index, array) => {
-        newArr.push(current + '~')
-      }, 0)
-     }
+    
+    let newArr = []
+    arr.reduce((prev, current, index, array) => {
+      newArr.push(current + '~')
+    }, 0)
+    
 
   },
 
   filter: function (array) {
-    const carryBricks = arr => {
-      let newArr = []
-      arr.reduce((prev, current, index, array) => {
-        current.length > 2 && newArr.push(current)
-      }, 0)
-    }
+    
+    let newArr = []
+    arr.reduce((prev, current, index, array) => {
+      current.length > 2 && newArr.push(current)
+    }, 0)
+    
 
 
   },
 
 
   forEach: function (array) {
-    const carryBricks = arr => {
-      return arr.reduce((prev, current, index, array) => {
-        console.log(current)
-      }, 0)
-     }
+  
+    return arr.reduce((prev, current, index, array) => {
+      console.log(current)
+    }, 0)
+     
   },
 
 
