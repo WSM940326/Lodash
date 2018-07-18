@@ -43,7 +43,7 @@ var wsm940326 = {
     if (!aaa || aaa.length <= 0) {
       return array.concat()
     }
-    return array.filter(function(value) {
+    return array.filter(function (value) {
       return aaa.indexOf(value) < 0
     })
 
@@ -56,12 +56,12 @@ var wsm940326 = {
 
     if (!array || !Array.isArray(array) || array.length <= 0) {
       return []
-    } 
+    }
     var aaa = arguments[1]
     if (!aaa || !Array.isArray(aaa) || aaa.length <= 0) {
       return array.concat()
     }
-    var func = arguments[2] 
+    var func = arguments[2]
     if (!func) {
       func = x => x
     } else if (typeof func === 'stying') {
@@ -76,19 +76,30 @@ var wsm940326 = {
     })
   },
 
-  
+
   // lodash ---> 06:differenceWith
   differenceWith: function (array) {
     if (!array || !Array.isArray(array) || array.length <= 0) {
       return []
     }
-    var aaa = arguments[1]
-    if (!aaa || !Array.isArray(aaa) || aaa.length <= 0) {
+    var except = arguments[1]
+    if (!except || !Array.isArray(except) || except.length <= 0) {
       return array.concat()
     }
-    var com = arguments[2]
-    if (!com || typeof com)
-
+    var comparator = arguments[2]
+    if (!comparator || typeof comparator !== 'function') {
+      comparator = (arrVal, othVal) => arrVal === othVal
+    }
+    return array.filter(function (value) {
+      var flag = true
+      except.forEach(element => {
+        if (comparator(value, element)) {
+          flag = false
+          return
+        }
+      })
+      return flag
+    })
 
   },
 
@@ -96,8 +107,7 @@ var wsm940326 = {
   drop: function (array, n = 1) {
     const length = array == null ? 0 : array.length
     return length ?
-      array.slice(n < 0 ? 0 : n, length) :
-      []
+      array.slice(n < 0 ? 0 : n, length) : []
   },
 
   // lodash ---> 08:dropRight
@@ -123,33 +133,33 @@ var wsm940326 = {
   },
 
   map: function (array) {
-    
+
     let newArr = []
     arr.reduce((prev, current, index, array) => {
       newArr.push(current + '~')
     }, 0)
-    
+
 
   },
 
   filter: function (array) {
-    
+
     let newArr = []
     arr.reduce((prev, current, index, array) => {
       current.length > 2 && newArr.push(current)
     }, 0)
-    
+
 
 
   },
 
 
   forEach: function (array) {
-  
+
     return arr.reduce((prev, current, index, array) => {
       console.log(current)
     }, 0)
-     
+
   },
 
 
