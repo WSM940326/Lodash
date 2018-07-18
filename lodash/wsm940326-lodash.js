@@ -129,7 +129,7 @@ var wsm940326 = {
   // lodash ---> 09:dropRightWhile
   dropRightWhile: function (array, predicate) {
     var tmpArray = array.slice()
-    return dropWhile(tmpArray.reverse(), predicate).reverse()
+    return dropRightWhile(tmpArray.reverse(), predicate).reverse()
 
   },
 
