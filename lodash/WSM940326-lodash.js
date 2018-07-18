@@ -163,6 +163,20 @@ var wsm940326 = {
 
 
 
+  
+  slice: function (array) {
+    
+ 
+  },
+
+   
+  fill: function (array) {
+    
+ 
+  },
+
+   
+
 
 
 
