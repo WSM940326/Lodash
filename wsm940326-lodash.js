@@ -638,10 +638,18 @@ var wsm940326 = {
     } else if (n < 0) {
       return array[n + array.length]
     }
+  },
+
+  /** 
+   * javascript comment 
+   * @Author: flydreame 
+   * @Date: 2018-07-19 23:45:20 
+   * @Desc:  
+   */  
+
+  join: function (array) {
+   
   }
-
-
-sss
 
 
 
