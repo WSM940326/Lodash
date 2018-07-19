@@ -112,6 +112,7 @@ var wsm940326 = {
 
   // lodash ---> 08:dropRight
   dropRight: function (array, n = 1) {
+
     if (!array || !Array.isArray(array) || array.length <= 0) {
       return []
     }
@@ -128,8 +129,9 @@ var wsm940326 = {
 
   // lodash ---> 09:dropRightWhile
   dropRightWhile: function (array, predicate) {
+
     var tmpArray = array.slice()
-    return dropWhile(tmpArray.reverse(), predicate).reverse()
+    return dropRightWhile(tmpArray.reverse(), predicate).reverse()
 
   },
 
@@ -394,7 +396,7 @@ var wsm940326 = {
    * @Desc:  
    */
 
-  formPairs: function (pairs) {
+  fromPairs: function (pairs) {
     if (!pairs || !Array.isArray(pairs) || pairs.length <= 0) {
       return []
     }
@@ -503,12 +505,12 @@ var wsm940326 = {
     return result
   },
 
-/** 
- * javascript comment 
- * @Author: flydreame 
- * @Date: 2018-07-18 20:05:52 
- * @Desc:  
- */
+  /** 
+   * javascript comment 
+   * @Author: flydreame 
+   * @Date: 2018-07-18 20:05:52 
+   * @Desc:  
+   */
 
   indexOf: function (array, value, fromIndex = 0) {
     if (!array || !Array.isArray(array) || array.length <= 0) {
@@ -527,7 +529,7 @@ var wsm940326 = {
    * @Author: flydreame 
    * @Date: 2018-07-18 19:25:47 
    * @Desc:  
-   */  
+   */
 
   last: function (array) {
     if (!array || !Array.isArray(array) || array.length <= 0) {
@@ -536,12 +538,12 @@ var wsm940326 = {
     return array[array.length - 1];
   },
 
-/** 
- * javascript comment 
- * @Author: flydreame 
- * @Date: 2018-07-18 18:55:44 
- * @Desc:  
- */
+  /** 
+   * javascript comment 
+   * @Author: flydreame 
+   * @Date: 2018-07-18 18:55:44 
+   * @Desc:  
+   */
 
   lastIndexOf: function (array, value, fromIndex) {
     if (!array || !Array.isArray(array) || array.length <= 0) {
@@ -550,6 +552,133 @@ var wsm940326 = {
     fromIndex = fromIndex == undefined ? array.length - 1 : fromIndex;
     return array.lastIndexOf(value, fromIndex);
   },
+
+  /** 
+   * javascript comment 
+   * @Author: flydreame 
+   * @Date: 2018-07-19 16:56:47 
+   * @Desc:  
+   */
+
+  after: function (n, func) {
+    return function(...args) {
+      if (c >= n) {
+        return func(...args)
+      }
+    }
+  },
+
+  /** 
+   * javascript comment 
+   * @Author: flydreame 
+   * @Date: 2018-07-19 16:56:57 
+   * @Desc:  
+   */
+
+  ary: function (func, n = func.length) {
+    return function() {
+  
+    }
+  },
+
+
+  flip: function (func) {
+    return function(...args) {
+      return func(...args.reverse())
+    }
+  },
+
+
+  nagate: function(func) {
+    return function(...args) {
+      return 
+    }
+  },
+
+  spread: function(func) {
+    return function(ary) {
+      return func.apply(null, ary)
+    }
+  },
+
+/** 
+ * javascript comment 
+ * @Author: flydreame 
+ * @Date: 2018-07-19 17:01:57 
+ * @Desc:  
+ */
+
+  initial: function (array) {
+    return array.slice(0, array.length - 1)
+  },
+
+  /** 
+   * javascript comment 
+   * @Author: flydreame 
+   * @Date: 2018-07-19 17:06:29 
+   * @Desc:  
+   */
+
+  intersection: function (...arrays) {
+    return arrays.reduce((dee, frr) => dee.slice(item => frr.indexOf(item) != -1))
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
