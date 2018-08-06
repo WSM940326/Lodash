@@ -649,8 +649,24 @@ var wsm940326 = {
 
   join: function (array) {
    
-  }
+  },
 
-12
+  toLower(string = '') {
+    for (var i = 0; i < string.length; i++) {
+      if (/[A-Z]/.test(string[i])) {
+        string = string.replace(string[i], String.fromCharCode(string[i].charCodeAt(0) + 32))
+      }
+    }
+    return string
+  },
+    
+  toUpper(string = '') {
+    for (var i = 0; i < string.length; i++) {
+      if (/[a-z]/.test(string[i])) {
+        string = string.replace(string[i], String.fromCharCode(string[i].charCodeAt(0) - 32))
+      }
+    }
+    return string
+  },
 
 }
