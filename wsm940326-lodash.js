@@ -651,6 +651,13 @@ var wsm940326 = {
    
   },
 
+
+  /** 
+   * javascript comment 
+   * @Author: flydreame 
+   * @Date: 2018-08-06 23:41:44 
+   * @Desc:  
+   */  
   toLower(string = '') {
     for (var i = 0; i < string.length; i++) {
       if (/[A-Z]/.test(string[i])) {
@@ -660,6 +667,13 @@ var wsm940326 = {
     return string
   },
     
+  /** 
+   * javascript comment 
+   * @Author: flydreame 
+   * @Date: 2018-08-06 23:41:52 
+   * @Desc:  
+   */  
+  
   toUpper(string = '') {
     for (var i = 0; i < string.length; i++) {
       if (/[a-z]/.test(string[i])) {
